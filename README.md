@@ -47,13 +47,11 @@ knee-tibia-femur-segmentation/
 ```
 ### Installation
 ```
-1.	Clone the repository:
-bash
+1.Clone the repository:
 CopyEdit
 'git clone https://github.com/< HanaMekonen/>/knee-tibia-femur-segmentation.git'
 'cd knee-tibia-femur-segmentation'
-2.	Install dependencies: Ensure you have Python 3.x. Then install required packages:
-bash
+2. Install dependencies: Ensure you have Python 3.x. Then install required packages:
 CopyEdit
 'pip install -r requirements.txt'
 The main dependencies are SimpleITK, numpy, scipy, and matplotlib.
