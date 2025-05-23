@@ -46,12 +46,16 @@ knee-tibia-femur-segmentation/
 └── README.md
 ```
 ### Installation
-```
+
 1.Clone the repository:
+```
 CopyEdit
 'git clone https://github.com/< HanaMekonen/>/knee-tibia-femur-segmentation.git'
 'cd knee-tibia-femur-segmentation'
+```
+
 2. Install dependencies: Ensure you have Python 3.x. Then install required packages:
+```
 CopyEdit
 'pip install -r requirements.txt'
 The main dependencies are SimpleITK, numpy, scipy, and matplotlib.
@@ -61,31 +65,35 @@ The main dependencies are SimpleITK, numpy, scipy, and matplotlib.
 The project is organized into modular scripts located in the codes/ directory. Each script focuses on a specific task in the knee CT analysis pipeline. Most of the modules define reusable functions and should be imported and called via main.py or used in run_landmark_pipeline.py. Only visualization.py is designed to run standalone.
 ### 🧩 Modular Components
 ```
-•	segmentation.py
+•segmentation.py
 Contains the segment_bones() function for femur and tibia segmentation.
-•	expansion.py
+•expansion.py
 Defines expand_mask_by_mm() to perform morphological expansion by a user-defined millimeter radius.
-•	randomization.py
+•randomization.py
 Provides randomize_mask_distance_based() to generate randomized contours within a specified margin.
-•	landmark_utils.py
+•landmark_utils.py
 Contains reusable functions for landmark extraction and coordinate transformation.
-•	run_landmark_pipeline.py
+•run_landmark_pipeline.py
 Executes the full workflow: segmentation → expansion → randomization → tibial landmark detection. Ideal for batch automation.
-•	main.py
+•main.py
 Entry-point script to manually control and orchestrate the full segmentation and mask processing pipeline.
-•	visualization.py
+•visualization.py
 Standalone script to generate coronal slice visualizations of segmentation results and landmarks.
 Run directly with:
+```
+```
 bash
 CopyEdit
 'python codes/visualization.py'
 ```
 ### 🏁 To Run the Pipeline
-```
 To run the complete tibia-femur segmentation and landmark extraction workflow:
+```
 bash
 CopyEdit
 'python codes/main.py'
+```
+```
 This script will:
 •	Load the CT scan
 •	Perform segmentation of tibia and femur
